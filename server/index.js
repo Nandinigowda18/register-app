@@ -17,7 +17,7 @@ const port = process.env.PORT || 5000;
 //   }
 // ));
 app.use(cors({
-  origin: 'http://example.com',  // specify the allowed origin
+  origin: 'https://register-app-frontend.vercel.app/',  // specify the allowed origin
   methods: ['GET', 'POST'],  // specify allowed HTTP methods
   credentials: true  // enable credentials like cookies and authentication headers
 }));
