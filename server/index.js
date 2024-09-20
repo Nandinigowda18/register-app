@@ -8,10 +8,20 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const app = express();
+
 const port = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+// app.use(cors(
+//   {
+//   }
+// ));
+app.use(cors({
+  origin: 'http://example.com',  // specify the allowed origin
+  methods: ['GET', 'POST'],  // specify allowed HTTP methods
+  credentials: true  // enable credentials like cookies and authentication headers
+}));
+
 app.use(express.json());
 
 // MongoDB connection
